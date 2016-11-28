@@ -40,6 +40,8 @@ namespace Tap
 					// note: "home" is the StoryBoard ID of the HomeController
 					var home = Storyboard.InstantiateViewController("Tab") as TabController;
 					NavigationController.PushViewController(home, true);
+
+
 				}
 				catch (ParseException f)
 				{
@@ -68,6 +70,7 @@ namespace Tap
 			{
 				// navigate to the welcome page,
 				var home = Storyboard.InstantiateViewController("Tab") as TabController;
+
 				NavigationController.PushViewController(home, true);
 			}
 

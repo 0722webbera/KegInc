@@ -16,31 +16,44 @@ namespace Tap
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UISearchDisplayController searchDisplayController { get; set; }
+        UIKit.UIButton btnSearch { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UISearchBar srcBar { get; set; }
+        UIKit.UISearchDisplayController searchDisplayController { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView tblItems { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtSearch { get; set; }
+
+        [Action ("BtnSearch_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BtnSearch_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
+            if (btnSearch != null) {
+                btnSearch.Dispose ();
+                btnSearch = null;
+            }
+
             if (searchDisplayController != null) {
                 searchDisplayController.Dispose ();
                 searchDisplayController = null;
             }
 
-            if (srcBar != null) {
-                srcBar.Dispose ();
-                srcBar = null;
-            }
-
             if (tblItems != null) {
                 tblItems.Dispose ();
                 tblItems = null;
+            }
+
+            if (txtSearch != null) {
+                txtSearch.Dispose ();
+                txtSearch = null;
             }
         }
     }

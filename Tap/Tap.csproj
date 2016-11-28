@@ -140,6 +140,14 @@
     <Compile Include="Controllers\Items.cs" />
     <Compile Include="Controllers\TableItem.cs" />
     <Compile Include="Controllers\ImageTableSource.cs" />
+    <Compile Include="Controllers\DetailController.cs" />
+    <Compile Include="Controllers\DetailController.designer.cs">
+      <DependentUpon>DetailController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchBarController.cs" />
+    <Compile Include="SearchBarController.designer.cs">
+      <DependentUpon>SearchBarController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

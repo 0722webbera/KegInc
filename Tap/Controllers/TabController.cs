@@ -8,14 +8,12 @@ namespace Tap
     {
         public TabController (IntPtr handle) : base (handle)
         {
-			
         }
 
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
-
-			this.NavigationItem.SetHidesBackButton(true, false);
+			//this.NavigationItem.SetHidesBackButton(true, false);
 		}
     }
 }
