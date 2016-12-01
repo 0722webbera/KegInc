@@ -101,6 +101,7 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Controllers\VendorControllers\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -147,6 +148,22 @@
     <Compile Include="SearchBarController.cs" />
     <Compile Include="SearchBarController.designer.cs">
       <DependentUpon>SearchBarController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditUserController.cs" />
+    <Compile Include="EditUserController.designer.cs">
+      <DependentUpon>EditUserController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\VendorControllers\VendorAccount.cs" />
+    <Compile Include="Controllers\VendorControllers\VendorAccount.designer.cs">
+      <DependentUpon>..\..\VendorControllers\VendorAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\VendorControllers\VendorItemsController.cs" />
+    <Compile Include="Controllers\VendorControllers\VendorItemsController.designer.cs">
+      <DependentUpon>..\..\VendorControllers\VendorItemsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\VendorControllers\VendorTabController.cs" />
+    <Compile Include="Controllers\VendorControllers\VendorTabController.designer.cs">
+      <DependentUpon>..\..\VendorControllers\VendorTabController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

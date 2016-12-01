@@ -33,13 +33,29 @@ namespace Tap
 			{
 				try
 				{
+
 					// you only need this one line to authenticate the user against Parse
 					ParseUser myUser = await ParseUser.LogInAsync(email, password);
 
 					// navigate to the welcome page,
 					// note: "home" is the StoryBoard ID of the HomeController
-					var home = Storyboard.InstantiateViewController("Tab") as TabController;
-					NavigationController.PushViewController(home, true);
+
+					var vendStatus = myUser["Vendor"];
+					Boolean bVendor = (Boolean)vendStatus;
+
+					if (bVendor == true)
+					{
+						var vend = Storyboard.InstantiateViewController("VendorTab") as VendorTabController;
+						NavigationController.PushViewController(vend, true);
+					}
+					else {
+						var home = Storyboard.InstantiateViewController("Tab") as TabController;
+						NavigationController.PushViewController(home, true);
+					}
+
+
+					//var home = Storyboard.InstantiateViewController("Tab") as TabController;
+					//NavigationController.PushViewController(home, true);
 
 
 				}
@@ -66,13 +82,14 @@ namespace Tap
 
 		public override void ViewDidLoad()
 		{
-			if (ParseUser.CurrentUser != null)
-			{
+			//uncheck when done testing
+			//if (ParseUser.CurrentUser != null)
+			//{
 				// navigate to the welcome page,
-				var home = Storyboard.InstantiateViewController("Tab") as TabController;
+		//		var home = Storyboard.InstantiateViewController("Tab") as TabController;
 
-				NavigationController.PushViewController(home, true);
-			}
+		//		NavigationController.PushViewController(home, true);
+		//	}
 
 			base.ViewDidLoad();
 			// Perform any additional setup after loading the view, typically from a nib.

@@ -17,9 +17,12 @@ namespace Tap
 			var password = txtPassword.Text;
 			var confirmPassword = txtConfirmPassword.Text;
 			var birthday = txtBirthday;
+			var vendor = sldVendor.On;
 			//string sdate = birthday.Date.ToString();
 
 			//txtLastName.Text = sdate;
+
+
 			                          
    			var alert = new UIAlertView();
 
@@ -59,7 +62,7 @@ namespace Tap
 						user["LastName"] = lastName;
 						user["FirstName"] = firstName;
 						//user["Birthday"] = birthday;
-						//user["test"] = birthday;
+						user["Vendor"] = vendor;
 
 						// make an asynchronous call to Parse to create a new user
 						await user.SignUpAsync();
@@ -84,6 +87,12 @@ namespace Tap
 		public RegisterController (IntPtr handle) : base (handle)
         {
         }
+
+		public override void ViewDidLoad()
+		{
+			base.ViewDidLoad();
+			sldVendor.On = false;
+		}
 
     }
 }

@@ -17,7 +17,7 @@ namespace Tap
 		{
 			base.ViewDidLoad();
 			Title = item.Heading;
-			lblDescription.Text = item.Description;
+			lblDescription.Text = item.SubHeading;
 			lblName.Text = item.Heading;
 			imgPhoto.Image = LoadImage(item.ImageUrl);
 

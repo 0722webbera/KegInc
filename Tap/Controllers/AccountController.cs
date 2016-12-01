@@ -7,7 +7,23 @@ namespace Tap
 {
     public partial class AccountController : UIViewController
     {
-        public AccountController (IntPtr handle) : base (handle)
+
+		partial void BtnEdit_TouchUpInside(UIButton sender)
+		{
+			var edit = Storyboard.InstantiateViewController("Edit") as EditUserController;
+			NavigationController.PushViewController(edit, true);
+		}
+
+		partial void BtnLogout_TouchUpInside(UIButton sender)
+		{
+			//Parse.ParseUser.LogOut();
+
+			ParseUser.LogOutAsync();
+			var home = Storyboard.InstantiateViewController("Home") as ViewController;
+			NavigationController.PushViewController(home, true);
+		}
+
+		public AccountController (IntPtr handle) : base (handle)
         {
 			
 		}

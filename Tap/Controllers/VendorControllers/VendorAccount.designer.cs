@@ -11,39 +11,26 @@ using UIKit;
 
 namespace Tap
 {
-    [Register ("AccountController")]
-    partial class AccountController
+    [Register ("VendorAccount")]
+    partial class VendorAccount
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton btnEdit { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton btnLogout { get; set; }
+        UIKit.UIButton btnVenLogout { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel lblWelcome { get; set; }
 
-        [Action ("BtnEdit_TouchUpInside:")]
+        [Action ("BtnVenLogout_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void BtnEdit_TouchUpInside (UIKit.UIButton sender);
-
-        [Action ("BtnLogout_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void BtnLogout_TouchUpInside (UIKit.UIButton sender);
+        partial void BtnVenLogout_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
-            if (btnEdit != null) {
-                btnEdit.Dispose ();
-                btnEdit = null;
-            }
-
-            if (btnLogout != null) {
-                btnLogout.Dispose ();
-                btnLogout = null;
+            if (btnVenLogout != null) {
+                btnVenLogout.Dispose ();
+                btnVenLogout = null;
             }
 
             if (lblWelcome != null) {

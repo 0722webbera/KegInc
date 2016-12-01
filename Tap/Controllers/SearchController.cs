@@ -37,6 +37,7 @@ namespace Tap
 					(
 						new TableItem(photoItem.Name)
 						{
+							Heading = photoItem.Name,
 							SubHeading = photoItem.Description,
 							ImageUrl = photoItem.Photo.Url.ToString(),
 							IsFavorite = photoItem.IsFavorite
